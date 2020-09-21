@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    text-align: left;
+    padding: 0.1rem;
+    margin: 3rem;
+}
+.line{
+    padding: 0.1rem;
+    background-color: gainsboro;
+    margin: 10px;
+}
+.mode{
+    margin-top: 5px;
+}
+.container{
+    padding: 0.1rem;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: ghostwhite;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1.5rem;
+    margin: 1rem;
+}
+.count{
+    font-size: 4rem;
+}
+.sm{
+    border-radius: 5px;
+    padding-right: -1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    column-gap: 7rem;
+    row-gap: 3rem;
+       
+}
+.facebook{
+    border-top: 0.5rem solid blue;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.twitter{
+    border-top: 0.5rem solid lightskyblue ;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.instagram{
+    border-top: 0.5rem solid pink;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.youtube{
+    border-top: 0.5rem solid red;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+h4{
+    margin-left: 3rem;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+ }
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
