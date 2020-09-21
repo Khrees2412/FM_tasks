@@ -2,11 +2,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 section{
     text-align: left;
     padding: 0.1rem;
     margin: 3rem;
+}
+section h1{
+    margin: 10px auto;
+    font-size: 30px;
+}
+section p{
+    margin: 10px auto;
+    color: rgb(120, 120, 120);
+    font-weight: 600;
+}
+.ip{
+    display: flex;
+    margin: 10px;
+}
+.ip img{
+    margin-right: 5px;
+}
+.ip{
+    color: rgb(120, 120, 120);
+    font-weight: 600;
+}
+.num{
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: rgb(120, 120, 120);
+
+}
+.pos{
+    color: green;
+}
+.neg{
+    color: red;
 }
 .line{
     padding: 0.1rem;
@@ -14,7 +48,8 @@ section{
     margin: 10px;
 }
 .mode{
-    margin-top: 5px;
+    margin-top: 20px;
+    color: rgb(120, 120, 120);
 }
 .container{
     padding: 0.1rem;
@@ -56,7 +91,7 @@ section{
     border-top-left-radius: 5px;
 }
 .instagram{
-    border-top: 0.5rem solid pink;
+    border-top: 0.5rem solid  pink ;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
@@ -65,8 +100,16 @@ section{
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
-h4{
+h3{
     margin-left: 3rem;
+    color: rgb(120, 120, 120);
+    font-size: 30px;
+
+}
+strong{
+    color: rgb(120, 120, 120);
+    font-weight: 600;
+
 }
 .attribution {
     font-size: 11px;
@@ -74,4 +117,22 @@ h4{
  }
 .attribution a { 
     color: hsl(228, 45%, 44%);
+}
+@media only screen and (min-width:1200px){
+    .container{
+        display: flex;
+    }
+    .box{
+        margin: 2rem;
+        padding: 3rem;
+    }
+    .innerbox{
+       display: flex;
+       justify-content: center;
+
+    }
+    .up{
+        display: flex;
+       justify-content: center;
+    }
 }
