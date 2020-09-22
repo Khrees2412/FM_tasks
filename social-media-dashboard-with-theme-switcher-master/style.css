@@ -80,6 +80,7 @@ section p{
     row-gap: 3rem;
        
 }
+
 .facebook{
     border-top: 0.5rem solid blue;
     border-top-right-radius: 5px;
@@ -118,21 +119,31 @@ strong{
 .attribution a { 
     color: hsl(228, 45%, 44%);
 }
-@media only screen and (min-width:1200px){
+@media only screen and (min-width:1080px){
     .container{
         display: flex;
+        width: fit-content;
     }
-    .box{
-        margin: 2rem;
-        padding: 3rem;
-    }
-    .innerbox{
-       display: flex;
-       justify-content: center;
-
+    .bottom{
+        display: grid;
+        
+       
     }
     .up{
         display: flex;
-       justify-content: center;
     }
+    .down{
+        display: flex;
+        grid-template-columns: 4fr;
+       
+    }
+    .box{
+        margin: 2em;
+        padding: 3em;
+    }
+    .sm{
+        margin: 1.3em;
+        padding: 2em;
+    }
+   
 }
