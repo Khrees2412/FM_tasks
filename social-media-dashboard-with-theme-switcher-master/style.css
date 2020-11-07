@@ -50,6 +50,16 @@ section p{
 .mode{
     margin-top: 20px;
     color: rgb(120, 120, 120);
+    display: flex;
+    flex-flow: row;
+}
+.btn-toggle{
+outline: none;
+border: none;
+}
+.toggle{
+    width: 100px;
+    height: 50px;
 }
 .container{
     padding: 0.1rem;
