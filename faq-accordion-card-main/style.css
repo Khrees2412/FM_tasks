@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+	font-family: "Kumbh Sans", sans-serif;
+}
+.image {
+	width: 300px;
+	height: 250px;
+	margin-bottom: 0;
+	position: absolute;
+	top: -130px;
+	left: 50px;
+	object-fit: contain;
+}
+.bg {
+	object-fit: contain;
+	position: absolute;
+	top: 0px;
+	left: 40px;
+	width: 270px;
+}
+.container {
+	margin: 10rem 2rem 2rem 2rem;
+	padding: 15%;
+	background-color: #fff;
+	border-radius: 40px;
+	position: relative;
+}
+.faq {
+	text-align: center;
+	margin-top: 5rem;
+	margin-bottom: 2rem;
+}
+.field {
+	margin-bottom: 10px;
+	padding: 10px;
+	border-bottom: 1px solid hsl(240, 5%, 91%);
+	line-break: loose;
+	font-size: 12px;
+	/* color: hsl(237, 12%, 33%); */
+	color: hsl(240, 6%, 50%);
+}
+svg {
+	cursor: pointer;
+}
+.top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.question {
+	margin-bottom: 10px;
+	margin-left: 0;
+}
+.answer {
+	display: none;
+}
+.arrow {
+	object-fit: contain;
+}
+.attribution {
+	font-size: 14px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+summary::-webkit-details-marker {
+	display: none;
+}
+summary::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	transform: rotate(45deg);
+	transition: all 0.3s ease-out;
+	border-bottom: 1px solid red;
+	border-right: 1px solid red;
+	outline: none;
+	float: right;
+}
+summary::before {
+	content: "";
+	transform: rotate(-135deg);
+	outline: none;
+	margin-top: 4px;
+}
+@media only screen and (max-width: 430px) {
+	.image {
+		left: 10px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.image {
+		width: 200px;
+		height: 150px;
+		margin-bottom: 0;
+		position: absolute;
+		top: -75px;
+		left: 40px;
+		object-fit: contain;
+	}
+	.bg {
+		object-fit: contain;
+		position: absolute;
+		top: 0px;
+		left: 55px;
+		width: 190px;
+	}
+}
+@media only screen and (max-width: 330px) {
+	.image {
+		left: 23px;
+	}
+	.bg {
+		object-fit: contain;
+		position: absolute;
+		top: 0px;
+		left: 45px;
+		width: 180px;
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	.image_hero {
+		background-image: url("./images/woman.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 600px;
+		height: 450px;
+		margin-bottom: 0;
+		position: absolute;
+		top: 150px;
+		left: 0px;
+		object-fit: contain;
+		z-index: 1;
+	}
+	.image {
+		display: none;
+	}
+}

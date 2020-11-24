@@ -1,40 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | FAQ Accordion Card</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+		<title>Frontend Mentor | FAQ Accordion Card</title>
+	</head>
+	<body>
+		<div class="hero image_hero"></div>
+		<div class="container">
+			<!-- <img class="image" src="./images/woman.png" width="200px" height="250px" /> -->
+			<img class="image" src="./images/illustration-woman-online-mobile.svg" />
+			<h1 class="faq">FAQ</h1>
+			<div class="field">
+				<div class="top">
+					<p class="question">How many team members can I invite?</p>
+					<img class="arrow" data-id="1" src="./images/icon-arrow-down.svg" alt="" srcset="" />
+					<img src="./images/bg-pattern-mobile.svg" class="bg" />
+				</div>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+				<p class="answer" data-id="1">
+					You can invite up to 2 additional users on the Free plan. There is no limit on team members for the
+					Premium plan.
+				</p>
+			</div>
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+			<div class="field">
+				<div class="top">
+					<p class="question">What is the maximum file upload size?</p>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+					<img class="arrow" data-id="2" src="./images/icon-arrow-down.svg" alt="" srcset="" />
+				</div>
+				<p class="answer" data-id="2">
+					No more than 2GB. All files in your account must fit your allotted storage space.
+				</p>
+			</div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+			<div class="field">
+				<div class="top">
+					<p class="question">How do I reset my password?</p>
+
+					<img class="arrow" data-id="3" src="./images/icon-arrow-down.svg" alt="" srcset="" />
+				</div>
+				<p class="answer" data-id="3">
+					Click “Forgot password” from the login page or “Change password” from your profile page. A reset
+					link will be emailed to you.
+				</p>
+			</div>
+
+			<div class="field">
+				<div class="top">
+					<p class="question">Can I cancel my subscription?</p>
+
+					<img class="arrow" data-id="4" src="./images/icon-arrow-down.svg" alt="" srcset="" />
+				</div>
+				<p class="answer" data-id="4">
+					Yes! Send us a message and we’ll process your request no questions asked.
+				</p>
+			</div>
+
+			<div class="field">
+				<div class="top">
+					<p class="question">Do you provide additional support?</p>
+					<img class="arrow" data-id="5" src="./images/icon-arrow-down.svg" alt="" srcset="" />
+				</div>
+				<p class="answer" data-id="5">
+					Chat and email support is available 24/7. Phone lines are open during normal business hours.
+				</p>
+			</div>
+			<details>
+				<summary></summary>
+				Hi theree
+			</details>
+		</div>
+		<div class="attribution">
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+			Coded by <a target="_blank" href="https://christianndu.com">Christian Ndu</a>.
+		</div>
+	</body>
+	<script>
+		alert("This project is yet to be completed!");
+
+		const svg = document.querySelectorAll("svg");
+		const answers = document.querySelectorAll(".answer");
+
+		/*  let state = true;
+				svg.forEach(s => {
+					s.addEventListener("click", () => {
+						if (state) {
+							answers.forEach(answer => (answer.style.display = "initial"));
+						} else {
+							answers.forEach(answer => (answer.style.display = "none"));
+						}
+						state = !state;
+					});
+		    });
+		    */
+
+		answers.forEach(answer => {
+			const ansID = answer.getAttribute("data-id");
+
+			svg.forEach(s => {
+				//const svgID = s.getAttribute("data-id");
+				s.addEventListener("click", function () {
+					const panel = this.nextElementSibling;
+					if (panel.style.display !== "none") {
+						panel.style.display = "none";
+					} else {
+						panel.style.display = "block";
+					}
+				});
+			});
+		});
+	</script>
 </html>
