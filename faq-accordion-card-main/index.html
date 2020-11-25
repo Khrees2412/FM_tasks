@@ -14,109 +14,85 @@
 		<title>Frontend Mentor | FAQ Accordion Card</title>
 	</head>
 	<body>
-		<div class="hero image_hero"></div>
 		<div class="container">
-			<!-- <img class="image" src="./images/woman.png" width="200px" height="250px" /> -->
 			<img class="image" src="./images/illustration-woman-online-mobile.svg" />
-			<h1 class="faq">FAQ</h1>
-			<div class="field">
-				<div class="top">
+			<div class="box">
+				<div class="hero image_hero"></div>
+
+				<img src="./images/bg-pattern-mobile.svg" class="bg" />
+				<h1 class="faq">FAQ</h1>
+				<div class="field">
 					<p class="question">How many team members can I invite?</p>
-					<img class="arrow" data-id="1" src="./images/icon-arrow-down.svg" alt="" srcset="" />
-					<img src="./images/bg-pattern-mobile.svg" class="bg" />
+
+					<p class="answer" data-id="1">
+						You can invite up to 2 additional users on the Free plan. There is no limit on team members for
+						the Premium plan.
+					</p>
 				</div>
 
-				<p class="answer" data-id="1">
-					You can invite up to 2 additional users on the Free plan. There is no limit on team members for the
-					Premium plan.
-				</p>
-			</div>
-
-			<div class="field">
-				<div class="top">
+				<div class="field">
 					<p class="question">What is the maximum file upload size?</p>
 
-					<img class="arrow" data-id="2" src="./images/icon-arrow-down.svg" alt="" srcset="" />
+					<p class="answer" data-id="2">
+						No more than 2GB. All files in your account must fit your allotted storage space.
+					</p>
 				</div>
-				<p class="answer" data-id="2">
-					No more than 2GB. All files in your account must fit your allotted storage space.
-				</p>
-			</div>
 
-			<div class="field">
-				<div class="top">
+				<div class="field">
 					<p class="question">How do I reset my password?</p>
 
-					<img class="arrow" data-id="3" src="./images/icon-arrow-down.svg" alt="" srcset="" />
+					<p class="answer" data-id="3">
+						Click “Forgot password” from the login page or “Change password” from your profile page. A reset
+						link will be emailed to you.
+					</p>
 				</div>
-				<p class="answer" data-id="3">
-					Click “Forgot password” from the login page or “Change password” from your profile page. A reset
-					link will be emailed to you.
-				</p>
-			</div>
 
-			<div class="field">
-				<div class="top">
+				<div class="field">
 					<p class="question">Can I cancel my subscription?</p>
 
-					<img class="arrow" data-id="4" src="./images/icon-arrow-down.svg" alt="" srcset="" />
+					<p class="answer" data-id="4">
+						Yes! Send us a message and we’ll process your request no questions asked.
+					</p>
 				</div>
-				<p class="answer" data-id="4">
-					Yes! Send us a message and we’ll process your request no questions asked.
-				</p>
-			</div>
 
-			<div class="field">
-				<div class="top">
+				<div class="field">
 					<p class="question">Do you provide additional support?</p>
-					<img class="arrow" data-id="5" src="./images/icon-arrow-down.svg" alt="" srcset="" />
+
+					<p class="answer" data-id="5">
+						Chat and email support is available 24/7. Phone lines are open during normal business hours.
+					</p>
 				</div>
-				<p class="answer" data-id="5">
-					Chat and email support is available 24/7. Phone lines are open during normal business hours.
-				</p>
 			</div>
-			<details>
-				<summary></summary>
-				Hi theree
-			</details>
 		</div>
 		<div class="attribution">
 			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 			Coded by <a target="_blank" href="https://christianndu.com">Christian Ndu</a>.
 		</div>
 	</body>
+	<!-- <img class="arrow" data-id="1" src="./images/icon-arrow-down.svg" alt="" srcset="" /> -->
+
 	<script>
-		alert("This project is yet to be completed!");
+		alert("Best viewed on mobile screens ");
 
-		const svg = document.querySelectorAll("svg");
-		const answers = document.querySelectorAll(".answer");
+		const questions = document.querySelectorAll(".question");
 
-		/*  let state = true;
-				svg.forEach(s => {
-					s.addEventListener("click", () => {
-						if (state) {
-							answers.forEach(answer => (answer.style.display = "initial"));
-						} else {
-							answers.forEach(answer => (answer.style.display = "none"));
-						}
-						state = !state;
-					});
-		    });
-		    */
+		let state = true;
 
-		answers.forEach(answer => {
-			const ansID = answer.getAttribute("data-id");
+		questions.forEach(question => {
+			question.addEventListener("click", function () {
+				this.style.color = "black";
+				this.style.fontWeight = "700";
 
-			svg.forEach(s => {
-				//const svgID = s.getAttribute("data-id");
-				s.addEventListener("click", function () {
-					const panel = this.nextElementSibling;
-					if (panel.style.display !== "none") {
-						panel.style.display = "none";
-					} else {
-						panel.style.display = "block";
-					}
-				});
+				const answer = this.nextElementSibling;
+
+				if (state) {
+					answer.style.display = "initial";
+				} else {
+					answer.style.display = "none";
+					this.style.color = "hsl(240, 6%, 50%)";
+					this.style.fontWeight = "400";
+				}
+				state = !state;
 			});
 		});
 	</script>
