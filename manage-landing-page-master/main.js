@@ -1,3 +1,5 @@
+// alert(" Suitable to view only for mobile screen sizes e.g 320x640 resolutions");
+
 const navSlide = () => {
 	const hamburger = document.querySelector(".hamburger");
 	const menu = document.querySelector(".menu");
