@@ -1,23 +1,26 @@
-// alert(" Suitable to view only for mobile screen sizes e.g 320x640 resolutions");
+alert(" Best viewed on mobile devices");
 
 const navSlide = () => {
 	const hamburger = document.querySelector(".hamburger");
-	const menu = document.querySelector(".menu");
-	const li = document.querySelectorAll(".menu li");
+	const _img = document.querySelector(".hamburger img");
+	const topnav = document.querySelector(".topnav");
+	const div1 = document.querySelector(".div1");
+	const div2 = document.querySelector(".div2");
+	const body = document.querySelector("body");
 
+	let state = true;
 	hamburger.addEventListener("click", () => {
-		//Toggle
-		menu.classList.toggle("nav-active");
-		//Animate
-		li.forEach((item, index) => {
-			if (item.style.animation) {
-				item.style.animation = "";
-			} else {
-				item.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`;
-			}
-		});
-		//Hamburger Animation
-		hamburger.classList.toggle("toggle");
+		if (state) {
+			_img.src = "./images/icon-close.svg";
+			state = !state;
+		} else {
+			_img.src = "./images/icon-hamburger.svg";
+			state = !state;
+		}
+		topnav.classList.toggle("nav-active");
+		div1.classList.toggle("div1-active");
+		div2.classList.toggle("div2-active");
+		body.classList.toggle("body");
 	});
 };
 navSlide();
@@ -57,7 +60,7 @@ let counter = 0;
 
 function slide() {
 	counter++;
-	for (i = 0; i < people.length; i++) {
+	for (let i = 0; i < people.length; i++) {
 		if (counter >= people.length) {
 			counter = 0;
 		}
