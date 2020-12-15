@@ -1,5 +1,3 @@
-alert(" Best viewed on mobile devices");
-
 const navSlide = () => {
 	const hamburger = document.querySelector(".hamburger");
 	const _img = document.querySelector(".hamburger img");
