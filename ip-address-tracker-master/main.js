@@ -3,7 +3,7 @@ const userlocation = document.getElementById("location");
 const timezone = document.getElementById("timezone");
 const isp = document.getElementById("isp");
 const input = document.querySelector(".search");
-//alert("Not completed yet!!");
+alert("Not completed yet!!");
 
 var map = L.map("mapid");
 
