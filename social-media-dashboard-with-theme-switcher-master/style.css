@@ -7,8 +7,8 @@
 section {
 	text-align: left;
 	padding: 0.1rem;
-	margin: 3rem;
-	border-bottom: 1px solid grey;
+	margin: 1.5rem;
+	border-bottom: 1px solid hsl(228, 12%, 44%);
 }
 section h1 {
 	margin: 10px auto;
@@ -16,14 +16,17 @@ section h1 {
 }
 section p {
 	margin: 10px auto;
-	color: rgb(120, 120, 120);
+	color: hsl(228, 12%, 44%);
 	font-weight: 600;
 }
 .mode {
-	margin: 3rem;
-	color: rgb(120, 120, 120);
+	margin: 1.5rem;
+	color: hsl(228, 12%, 44%);
 	display: flex;
 	justify-content: space-between;
+}
+.mode p {
+	color: hsl(228, 12%, 44%);
 }
 .btn-toggle {
 	outline: none;
@@ -46,14 +49,17 @@ section p {
 	margin-right: 5px;
 }
 .ip {
-	color: rgb(120, 120, 120);
+	color: hsl(228, 12%, 44%);
 	font-weight: 600;
 }
 .num {
-	letter-spacing: 0.2rem;
+	letter-spacing: 0.3rem;
 	text-transform: uppercase;
 	margin-bottom: 15px;
-	color: rgb(120, 120, 120);
+	color: hsl(228, 12%, 44%);
+}
+.num:first-child {
+	color: white;
 }
 .pos {
 	color: green;
@@ -61,14 +67,28 @@ section p {
 .neg {
 	color: red;
 }
+.pos::before {
+	content: url("./images/icon-up.svg");
+	color: green;
+	margin-right: 7px;
+}
+.neg::before {
+	content: url("./images/icon-down.svg");
+	color: red;
+	margin-right: 7px;
+}
 
 .container {
-	padding: 0.1rem;
-	margin: 2rem;
 	display: grid;
-	grid-template-columns: 1fr;
-	gap: 5px;
+	grid-template-rows: repeat(1fr 1fr);
+	padding: 0.3rem;
+	margin: 0.5rem;
 }
+.bottom {
+	display: flex;
+	flex-direction: column;
+}
+
 .box {
 	display: flex;
 	align-items: center;
@@ -84,17 +104,19 @@ section p {
 	opacity: 1;
 	cursor: pointer;
 }
+
 .count {
 	font-size: 4rem;
+	color: hsl(228, 12%, 44%);
 }
 .sm {
 	border-radius: 5px;
-	padding-right: -12rem;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	column-gap: 6rem;
 	row-gap: 3rem;
-	padding: 2rem;
+	padding: 2rem 1rem;
 }
 
 .facebook {
@@ -108,54 +130,85 @@ section p {
 	border-top-left-radius: 5px;
 }
 .instagram {
-	border-top: 0.5rem solid pink;
+	border-top: 10px solid rgb(255, 141, 230);
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 }
+.instagram:hover {
+	border-image: linear-gradient(45deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 0.5;
+}
+
 .youtube {
 	border-top: 0.5rem solid red;
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 }
-h3 {
-	margin-left: 3rem;
-	color: rgb(120, 120, 120);
+.h3 {
+	margin-left: 1.5rem;
+	color: hsl(228, 12%, 44%);
 	font-size: 30px;
 }
-strong {
-	color: rgb(120, 120, 120);
-	font-weight: 600;
+.left p {
+	color: hsl(228, 12%, 44%);
+	font-size: 15px;
 }
+.left p,
+.right img {
+	margin-bottom: 20px;
+}
+.left h1,
+.right p {
+	margin-top: 10px;
+}
+.right {
+	margin-right: 10px;
+}
+
 .attribution {
-	font-size: 11px;
+	font-size: 13px;
 	text-align: center;
+	color: grey;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
 }
 @media only screen and (min-width: 1080px) {
+	body {
+		width: 95%;
+		margin: 10px auto;
+	}
+	section {
+		margin: auto;
+		margin-top: 30px;
+		width: 95%;
+	}
 	.mode {
 		display: flex;
+		margin: 1rem auto;
+		width: 95%;
 	}
 	.container {
 		display: flex;
-		width: fit-content;
+	}
+	.top .box {
+		padding: 3.4rem;
+		margin: 1.5rem;
 	}
 	.bottom {
 		display: grid;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: repeat(2, 1fr);
 	}
 	.up {
-		display: flex;
-		grid-template-columns: 4fr;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 	}
 	.down {
-		display: flex;
-		grid-template-columns: 4fr;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 	}
 	.box {
 		margin: 2.3em;
-		padding: 3rem;
+		/* padding: 3rem; */
 	}
 	.sm {
 		margin: 1.3em;

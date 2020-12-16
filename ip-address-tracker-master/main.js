@@ -2,8 +2,9 @@ const address = document.getElementById("address");
 const userlocation = document.getElementById("location");
 const timezone = document.getElementById("timezone");
 const isp = document.getElementById("isp");
+
 const input = document.querySelector(".search");
-alert("Not completed yet!!");
+//alert("Not completed yet!!");
 
 var map = L.map("mapid");
 
@@ -13,8 +14,7 @@ let lng;
 const displayMap = () => {
 	var markerIcon = L.icon({
 		iconUrl: "images/icon-location.svg",
-
-		iconSize: [46, 56], // size of the icon
+		iconSize: [46, 56],
 		iconAnchor: [23, 55] // point of the icon which will correspond to marker's location
 	});
 	map.setView([lat, lng], 17);
